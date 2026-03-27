@@ -13,15 +13,14 @@
         }
 
         body {
-            background-color: #f5f7fb;
+            background-color: #000000;
             font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            padding: 20px 16px 40px;
+            padding: 6.5rem 16px 24px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        /* 主容器 */
         .app-container {
             max-width: 480px;
             margin: 0 auto;
@@ -31,41 +30,45 @@
             flex-direction: column;
         }
 
-        /* 上半部分：文本框区域 */
         .info-box {
-            background-color: white;
-            border-radius: 28px;
-            padding: 20px 22px;
-            margin-bottom: 32px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
         }
 
         .title {
-            font-size: 1.8rem;
+            font-size: 2.4rem;
             font-weight: 700;
-            color: #1e2a3e;
-            margin-bottom: 12px;
+            color: #ffffff;
+            margin-bottom: 14px;
             letter-spacing: -0.3px;
             line-height: 1.3;
+            text-align: center;
         }
 
         .description {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 400;
-            color: #3c4b5e;
-            line-height: 1.45;
-            background: #f0f2f6;
-            padding: 14px 16px;
+            color: #cdcdcd;
+            line-height: 1.5;
+            background: #1e1e1e;
+            padding: 16px 18px;
             border-radius: 20px;
             margin-top: 6px;
         }
 
         .description p {
-            margin: 4px 0;
+            margin: 8px 0;
         }
 
-        /* 下半部分公共容器 */
+        .description a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .description a:active {
+            opacity: 0.8;
+        }
+
         .lower-section {
             flex: 1;
             display: flex;
@@ -75,46 +78,44 @@
             min-height: 280px;
         }
 
-        /* 圆形按钮样式 (直径 = 宽度的1/4) */
         .circle-btn {
             width: 25vw;
             height: 25vw;
             max-width: 140px;
             max-height: 140px;
-            background: linear-gradient(145deg, #2c7da0, #1f5e7a);
+            background: linear-gradient(145deg, #3b82f6, #1e40af);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             cursor: pointer;
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+            box-shadow: 0 12px 24px rgba(59,130,246,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
             transition: transform 0.1s ease, box-shadow 0.2s ease;
             margin: 20px auto;
         }
 
         .circle-btn:active {
             transform: scale(0.96);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(59,130,246,0.4);
         }
 
         .circle-text {
             color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
+            font-size: 1.5rem;
+            font-weight: 800;
             letter-spacing: 1px;
-            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            text-shadow: 0 1px 1px rgba(0,0,0,0.3);
             padding: 0 6px;
         }
 
-        /* 文件列表区域卡片样式 */
         .file-panel {
-            background: white;
+            background: #121212;
             border-radius: 32px;
             padding: 20px 18px;
             width: 100%;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eef2f8;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #2c2c2c;
             transition: all 0.2s ease;
         }
 
@@ -125,15 +126,15 @@
             margin-bottom: 18px;
             flex-wrap: wrap;
             gap: 10px;
-            border-bottom: 1px solid #e9edf2;
+            border-bottom: 1px solid #2a2a2a;
             padding-bottom: 12px;
         }
 
         .file-count {
             font-size: 0.85rem;
             font-weight: 500;
-            color: #5e6f8d;
-            background: #eef2fa;
+            color: #bbbbbb;
+            background: #1e1e2a;
             padding: 4px 12px;
             border-radius: 30px;
         }
@@ -144,32 +145,31 @@
         }
 
         .secondary-btn {
-            background: #f0f4f9;
+            background: #2a2a2a;
             border: none;
             padding: 8px 16px;
             border-radius: 40px;
             font-size: 0.8rem;
             font-weight: 500;
-            color: #2c7da0;
+            color: #f0f0f0;
             cursor: pointer;
             transition: 0.1s;
         }
 
         .secondary-btn:active {
-            background: #e2e8f0;
+            background: #3a3a3a;
             transform: scale(0.97);
         }
 
         .clear-btn {
-            color: #d9534f;
-            background: #fee9e7;
+            color: #ff9f8f;
+            background: #2a1e1c;
         }
 
         .clear-btn:active {
-            background: #fadbd9;
+            background: #3e2a28;
         }
 
-        /* 文件列表 */
         .file-list {
             list-style: none;
             margin: 12px 0 8px;
@@ -181,28 +181,54 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #fafcff;
+            background: #1a1a1a;
             padding: 12px 14px;
             margin-bottom: 8px;
             border-radius: 20px;
-            border: 1px solid #eef2f8;
+            border: 1px solid #2c2c2c;
             transition: background 0.1s;
+            flex-wrap: wrap;
+            gap: 8px;
         }
 
         .file-name {
             font-size: 0.9rem;
             font-weight: 500;
-            color: #1f2a44;
+            color: #e5e5e5;
             flex: 1;
             word-break: break-all;
-            padding-right: 12px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            min-width: 0;
         }
 
-        .view-btn {
-            background-color: #2c7da0;
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .copy-name-btn {
+            background-color: #4b5563;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+            transition: 0.1s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .copy-name-btn:active {
+            background-color: #374151;
+            transform: scale(0.96);
+        }
+
+        .download-btn {
+            background-color: #3b82f6;
             border: none;
             padding: 8px 20px;
             border-radius: 30px;
@@ -211,12 +237,11 @@
             color: white;
             cursor: pointer;
             transition: 0.1s;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            flex-shrink: 0;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
 
-        .view-btn:active {
-            background-color: #1e5f7a;
+        .download-btn:active {
+            background-color: #2563eb;
             transform: scale(0.96);
         }
 
@@ -226,138 +251,79 @@
         }
 
         .add-more-btn {
-            background: #eef2fa;
-            border: 1px solid #cbdae9;
+            background: #2a2a2a;
+            border: 1px solid #3e3e3e;
             padding: 10px 20px;
             border-radius: 60px;
             font-size: 0.9rem;
             font-weight: 500;
-            color: #1e5f7a;
+            color: #b0d4ff;
             width: 100%;
             cursor: pointer;
             transition: 0.1s;
         }
 
         .add-more-btn:active {
-            background: #e2e8f3;
+            background: #353535;
+            transform: scale(0.98);
         }
 
-        /* 模态框 (图片预览) */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-content {
-            background: transparent;
-            width: 90%;
-            max-width: 90%;
-            text-align: center;
-            position: relative;
-        }
-
-        .modal-img {
-            max-width: 100%;
-            max-height: 80vh;
-            border-radius: 24px;
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
-            background: #1e1e1e;
-            object-fit: contain;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: -42px;
-            right: 0px;
-            background: rgba(30,30,40,0.8);
-            color: white;
-            font-size: 28px;
-            font-weight: bold;
-            width: 44px;
-            height: 44px;
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.3);
-            transition: 0.1s;
-        }
-
-        .close-modal:active {
-            background: #444;
-            transform: scale(0.94);
-        }
-
-        /* 隐藏input */
-        #fileInput {
-            display: none;
-        }
-
-        /* 空状态占位符 */
         .empty-placeholder {
             text-align: center;
-            color: #94a3b8;
+            color: #7e7e8c;
             padding: 40px 20px;
             font-size: 0.9rem;
         }
 
-        /* 适配非常小的屏幕 */
-        @media (max-width: 380px) {
-            .circle-text {
-                font-size: 1rem;
+        #fileInput {
+            display: none;
+        }
+
+        @media (max-width: 450px) {
+            .copy-name-btn {
+                padding: 6px 12px;
+                font-size: 0.7rem;
             }
-            .view-btn {
+            .download-btn {
                 padding: 6px 14px;
                 font-size: 0.75rem;
             }
             .file-name {
                 font-size: 0.8rem;
             }
+            .circle-text {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
 <body>
 <div class="app-container">
-    <!-- 上半部分：文本框区域 -->
     <div class="info-box">
-        <div class="title">📁 工作资料文件传输助手</div>
+        <div class="title">工作资料文件传输助手</div>
         <div class="description">
-            <p>📌 使用说明：</p>
-            <p>1️⃣ 点击下方圆形按钮，从相册/文件管理器选择<strong>图片文件</strong>（支持多选）。</p>
-            <p>2️⃣ 选择后文件会缓存至列表，右侧「查看」按钮可预览图片。</p>
-            <p>3️⃣ 可继续「添加更多」或「清空全部」，清空后圆形按钮重新出现。</p>
-            <p>💡 所有图片仅保存在当前页面内存中，不会上传服务器。</p>
+            <p>使用说明：</p>
+            <p>1.点击「查看文件」，会跳转到Android原生文件管理；</p>
+            <p>2.在文件管理中点击「个人」，可以查看主空间最近的文件，也可以点击左上角的≡通过其他应用选择文件；</p>
+            <p>3.选择后文件将存储至浏览器缓存，点击「下载」可保存到本地；</p>
+            <p>4.本页面没有任何联网功能，仅在本地运行，因此上传和下载文件几乎没有延迟；</p>
+            <p>5.点击<a href="https://pan.quark.cn/s/2af5e5386013" target="_blank" rel="noopener noreferrer">链接</a>下载本页面的Html文件，无需联网也能传文件。了解更多</p>
         </div>
     </div>
 
-    <!-- 下半部分动态区域 (圆形 或 文件列表) -->
     <div class="lower-section" id="lowerSection">
-        <!-- 圆形组件区域 (默认显示) -->
         <div id="circleContainer" class="circle-btn">
             <span class="circle-text">查看文件</span>
         </div>
-        <!-- 文件列表区域 (初始隐藏) -->
         <div id="fileListContainer" style="display: none; width: 100%;">
             <div class="file-panel">
                 <div class="file-header">
                     <span class="file-count" id="fileCount">0个文件</span>
                     <div class="action-buttons">
-                        <button class="secondary-btn" id="clearAllBtn">🗑️ 清空全部</button>
+                        <button class="secondary-btn clear-btn" id="clearAllBtn">清空</button>
                     </div>
                 </div>
                 <div id="fileListContent">
-                    <!-- 动态列表渲染在这里 -->
                     <div class="empty-placeholder">暂无文件，点击添加</div>
                 </div>
                 <div class="add-more">
@@ -368,23 +334,12 @@
     </div>
 </div>
 
-<!-- 隐藏的文件选择input (支持多选图片) -->
-<input type="file" id="fileInput" multiple accept="image/*" />
-
-<!-- 图片预览模态框 -->
-<div id="imageModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <img id="previewImage" class="modal-img" src="" alt="图片预览">
-    </div>
-</div>
+<input type="file" id="fileInput" multiple />
 
 <script>
     (function() {
-        // ---------- 核心数据 ----------
-        let cachedFiles = [];      // 存储 File 对象，保留在网页缓存中
+        let cachedFiles = [];
 
-        // DOM 元素
         const circleContainer = document.getElementById('circleContainer');
         const fileListContainer = document.getElementById('fileListContainer');
         const fileInput = document.getElementById('fileInput');
@@ -392,41 +347,101 @@
         const fileCountSpan = document.getElementById('fileCount');
         const clearAllBtn = document.getElementById('clearAllBtn');
         const addMoreBtn = document.getElementById('addMoreBtn');
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('previewImage');
-        const closeModalBtn = document.querySelector('.close-modal');
 
-        // 辅助函数: 切换视图 (圆形 或 文件列表)
         function toggleView() {
             if (cachedFiles.length > 0) {
-                // 有文件 -> 显示列表，隐藏圆形
                 circleContainer.style.display = 'none';
                 fileListContainer.style.display = 'block';
             } else {
-                // 无文件 -> 显示圆形，隐藏列表
                 circleContainer.style.display = 'flex';
                 fileListContainer.style.display = 'none';
             }
         }
 
-        // 渲染文件列表 (完全基于 cachedFiles)
-        function renderFileList() {
-            if (!fileListContent) return;
+        function downloadFile(file) {
+            if (!file) return;
+            try {
+                const blobUrl = URL.createObjectURL(file);
+                const link = document.createElement('a');
+                link.href = blobUrl;
+                link.download = file.name || 'download';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 150);
+            } catch (err) {
+                console.error('下载失败', err);
+                alert('下载失败，请重试');
+            }
+        }
 
+        async function copyFileName(file) {
+            if (!file || !file.name) return;
+            const fileName = file.name;
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                try {
+                    await navigator.clipboard.writeText(fileName);
+                    showToast(`✅ 已复制: ${fileName}`);
+                    return;
+                } catch (err) {
+                    console.warn('Clipboard API 失败，尝试降级方案', err);
+                }
+            }
+            try {
+                const textarea = document.createElement('textarea');
+                textarea.value = fileName;
+                textarea.style.position = 'fixed';
+                textarea.style.top = '-1000px';
+                textarea.style.left = '-1000px';
+                document.body.appendChild(textarea);
+                textarea.select();
+                const success = document.execCommand('copy');
+                document.body.removeChild(textarea);
+                if (success) {
+                    showToast(`✅ 已复制: ${fileName}`);
+                } else {
+                    throw new Error('execCommand 复制失败');
+                }
+            } catch (err) {
+                console.error('复制失败', err);
+                alert('复制失败，请手动复制文件名');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '80px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = 'rgba(0,0,0,0.85)';
+            toast.style.color = 'white';
+            toast.style.padding = '8px 18px';
+            toast.style.borderRadius = '40px';
+            toast.style.fontSize = '14px';
+            toast.style.zIndex = '9999';
+            toast.style.whiteSpace = 'nowrap';
+            toast.style.maxWidth = '90%';
+            toast.style.overflow = 'hidden';
+            toast.style.textOverflow = 'ellipsis';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+
+        function renderFileList() {
             const len = cachedFiles.length;
             fileCountSpan.innerText = `${len} 个文件`;
 
             if (len === 0) {
-                fileListContent.innerHTML = `<div class="empty-placeholder">📭 暂无文件，点击「添加更多文件」或圆形按钮选择图片</div>`;
-                toggleView();          // 同步切换圆形/列表视图
+                fileListContent.innerHTML = `<div class="empty-placeholder">📭 暂无文件，点击「添加更多文件」或圆形按钮选择文件</div>`;
+                toggleView();
                 return;
             }
 
-            // 构建列表html (每个条目: 左边文件名, 右边「查看」按钮)
             let itemsHtml = `<ul class="file-list" id="dynamicFileList">`;
             cachedFiles.forEach((file, idx) => {
-                // 对文件名进行转义，避免XSS
-                let safeName = file.name.replace(/[&<>]/g, function(m) {
+                let safeName = (file.name || '未命名文件').replace(/[&<>]/g, function(m) {
                     if (m === '&') return '&amp;';
                     if (m === '<') return '&lt;';
                     if (m === '>') return '&gt;';
@@ -435,226 +450,88 @@
                 itemsHtml += `
                     <li class="file-item" data-index="${idx}">
                         <span class="file-name" title="${safeName}">${safeName}</span>
-                        <button class="view-btn" data-index="${idx}">查看</button>
+                        <div class="btn-group">
+                            <button class="copy-name-btn" data-index="${idx}" data-action="copy">复制文件名</button>
+                            <button class="download-btn" data-index="${idx}" data-action="download">下载</button>
+                        </div>
                     </li>
                 `;
             });
             itemsHtml += `</ul>`;
             fileListContent.innerHTML = itemsHtml;
-
-            // 因为重新生成了DOM, 需要重新绑定委托事件 (使用全局委托在父容器上监听，但为了保证性能，直接监听 fileListContent)
-            // 但是注意：查看按钮的事件我们通过事件委托在 fileListContent 上统一监听。
-            // 已经在最外层绑定了监听器，所以无需再次绑定。
-            // 同时也要保证圆形/列表视图切换正确
             toggleView();
         }
 
-        // 追加新文件 (合并新选择的文件到缓存)
         function appendFiles(newFiles) {
             if (!newFiles || newFiles.length === 0) return false;
-            // 过滤掉非图片类型 (双重保证，input已经accept但用户可能从某些方式绕过)
-            const validImages = Array.from(newFiles).filter(file => file.type.startsWith('image/'));
-            if (validImages.length === 0) {
-                // 如果没有有效图片，提示一下
-                alert('请选择图片文件 (jpg, png, gif, webp等)');
-                return false;
-            }
-            // 追加到缓存数组
-            cachedFiles.push(...validImages);
-            // 重新渲染列表
+            const validFiles = Array.from(newFiles);
+            if (validFiles.length === 0) return false;
+            cachedFiles.push(...validFiles);
             renderFileList();
             return true;
         }
 
-        // 清空所有文件
         function clearAllFiles() {
             if (cachedFiles.length === 0) return;
             cachedFiles = [];
-            renderFileList();   // 列表为空时自动切换回圆形视图
-            // 同时如果有模态框打开则关闭
-            closeModal();
+            renderFileList();
         }
 
-        // 删除单个文件 (通过索引)
-        function deleteFileByIndex(index) {
-            if (index >= 0 && index < cachedFiles.length) {
-                cachedFiles.splice(index, 1);
-                renderFileList();  // 重新渲染后索引会自动更新
-                // 如果删除后没有文件了，模态框最好关闭（可选）
-                if (cachedFiles.length === 0) {
-                    closeModal();
-                }
-            }
-        }
-
-        // ---------- 图片预览逻辑 ----------
-        let currentPreviewUrl = null;
-
-        // 关闭模态框并释放临时URL
-        function closeModal() {
-            if (currentPreviewUrl) {
-                URL.revokeObjectURL(currentPreviewUrl);
-                currentPreviewUrl = null;
-            }
-            modal.style.display = 'none';
-            modalImg.src = '';
-        }
-
-        // 展示图片 (接收File对象)
-        function previewImage(file) {
-            if (!file || !file.type.startsWith('image/')) {
-                alert('无法预览非图片文件');
-                return;
-            }
-            // 关闭之前的预览并释放旧URL
-            if (currentPreviewUrl) {
-                URL.revokeObjectURL(currentPreviewUrl);
-                currentPreviewUrl = null;
-            }
-            // 生成新blob URL
-            const objectUrl = URL.createObjectURL(file);
-            currentPreviewUrl = objectUrl;
-            modalImg.src = objectUrl;
-            modal.style.display = 'flex';
-        }
-
-        // 处理查看按钮: 根据文件索引展示图片
-        function handleViewFile(index) {
-            if (index >= 0 && index < cachedFiles.length) {
-                const targetFile = cachedFiles[index];
-                if (targetFile && targetFile.type.startsWith('image/')) {
-                    previewImage(targetFile);
-                } else {
-                    alert('该文件不是图片，无法显示预览');
-                }
-            } else {
-                console.warn('无效的文件索引');
-            }
-        }
-
-        // 唤起原生文件管理器 (触发input)
-        function triggerFilePicker() {
-            // 清空input的value，保证选择同一个文件也能触发change
-            fileInput.value = '';
-            // 触发点击，唤起安卓文件管理器 / 图库 (支持多选)
-            fileInput.click();
-        }
-
-        // ---------- 事件监听 (委托) ----------
-        // 监听文件列表内的点击事件（查看按钮以及可选的删除扩展，但我们每个条目右侧只有“查看”，无删除按钮）
-        // 但是用户如果以后扩展不需要考虑，目前只处理查看按钮。
-        // 另外为了更好的体验，为每个条目增加滑动删除？不需要，我们提供清空所有按钮和单个删除？
-        // 为了满足精确需求右边只有查看，但用户可能想单独删除某个文件，但需求没有要求，不过为了方便提供额外功能但不在条目上显示删除按钮。
-        // 但为了防止混乱，不提供单个删除按钮，只提供「清空全部」及新增文件，完全符合要求且简洁。
-        // 如果用户想移除个别文件，可以使用清空全部重新添加。不过为了完善，我们保持只有查看按钮。
-        // 但注意，如果需要单独删除，可以在以后加，但为了完全符合题目，右边只存在查看矩形按钮。
-        // 由于没有删除按钮，用户必须通过清空全部来重置，或者重新添加，这是符合的。
-        // 但为了完美，如果需要单独删除文件，用户目前无法删除单个文件，但是题目未明确，所以目前可以。
-        // 为了更好的可操作性，我再添加一个轻交互（长按提示）？不需要，遵守核心。
-        // 但注意：如果用户不小心传错某个文件，只能清空全部，可能会不便，不过基本符合“文件传输助手”核心场景。
-        // 但我们可以通过在每个文件项上增加额外“删除”小按钮？但会破坏右边仅矩形“查看”的布局。因此保持原样。
-        // 为更好体验，用户可以用清空全部再重新添加所有想要的文件。
-        // 事件委托监听查看按钮
         function setupDelegation() {
-            // 监听动态文件列表区域的点击 (fileListContent 内)
             fileListContent.addEventListener('click', (e) => {
-                // 查找实际点击的查看按钮
-                const viewBtn = e.target.closest('.view-btn');
-                if (viewBtn && viewBtn.dataset.index !== undefined) {
-                    const idx = parseInt(viewBtn.dataset.index, 10);
-                    if (!isNaN(idx)) {
+                const copyBtn = e.target.closest('.copy-name-btn');
+                if (copyBtn && copyBtn.dataset.index !== undefined) {
+                    const idx = parseInt(copyBtn.dataset.index, 10);
+                    if (!isNaN(idx) && idx >= 0 && idx < cachedFiles.length) {
                         e.stopPropagation();
-                        handleViewFile(idx);
+                        copyFileName(cachedFiles[idx]);
                     }
                     return;
                 }
-                // 没有其他交互按钮
+
+                const downloadBtn = e.target.closest('.download-btn');
+                if (downloadBtn && downloadBtn.dataset.index !== undefined) {
+                    const idx = parseInt(downloadBtn.dataset.index, 10);
+                    if (!isNaN(idx) && idx >= 0 && idx < cachedFiles.length) {
+                        e.stopPropagation();
+                        downloadFile(cachedFiles[idx]);
+                    }
+                    return;
+                }
             });
         }
 
-        // 监听圆形按钮点击 -> 唤起文件管理器
-        function bindCircleEvent() {
-            if (circleContainer) {
-                circleContainer.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    triggerFilePicker();
-                });
-            }
+        function triggerFilePicker() {
+            fileInput.value = '';
+            fileInput.click();
         }
 
-        // 添加更多文件按钮 (在文件列表内部)
-        function bindAddMoreEvent() {
-            if (addMoreBtn) {
-                addMoreBtn.addEventListener('click', () => {
-                    triggerFilePicker();
-                });
-            }
-        }
-
-        // 清空所有文件
-        function bindClearAllEvent() {
+        function bindEvents() {
+            if (circleContainer) circleContainer.addEventListener('click', triggerFilePicker);
+            if (addMoreBtn) addMoreBtn.addEventListener('click', triggerFilePicker);
             if (clearAllBtn) {
                 clearAllBtn.addEventListener('click', () => {
                     if (cachedFiles.length > 0) {
-                        if (confirm(`确定要清空全部 ${cachedFiles.length} 个文件吗？`)) {
-                            clearAllFiles();
-                        }
+                        if (confirm(`确定要清空全部 ${cachedFiles.length} 个文件吗？`)) clearAllFiles();
                     } else {
-                        // 没有文件时提示
                         alert('当前没有文件可清空');
                     }
                 });
             }
-        }
-
-        // 监听文件选择变化 (用户选取文件后)
-        function bindFileInputChange() {
-            fileInput.addEventListener('change', (event) => {
-                const selectedFiles = event.target.files;
-                if (!selectedFiles || selectedFiles.length === 0) return;
-                // 追加新文件到缓存
-                appendFiles(selectedFiles);
-                // 清空input的value，以便下次选择相同文件可再次触发
+            fileInput.addEventListener('change', (e) => {
+                const files = e.target.files;
+                if (files && files.length) appendFiles(files);
                 fileInput.value = '';
             });
         }
 
-        // 模态框关闭事件
-        function bindModalEvents() {
-            if (closeModalBtn) {
-                closeModalBtn.addEventListener('click', closeModal);
-            }
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-            // 防止触摸穿透
-            modal.addEventListener('touchmove', (e) => {
-                if (e.target === modal) {
-                    e.preventDefault();
-                }
-            });
-        }
-
-        // 全局辅助：确保任何情况下，视图渲染同步
         function init() {
-            // 初始无文件，确保圆形可见，列表隐藏
             cachedFiles = [];
-            renderFileList();  // 内部调用 toggleView，确保初始显示圆形
-            bindCircleEvent();
-            bindAddMoreEvent();
-            bindClearAllEvent();
-            bindFileInputChange();
+            renderFileList();
+            bindEvents();
             setupDelegation();
-            bindModalEvents();
-
-            // 额外安全: 如果从文件列表状态点添加更多时，圆形依然隐藏，完全符合下半部分为列表状态
-            // 同时确保每次追加文件后重新渲染，列表保持在文件列表视图。
-            // 适配安卓: 禁止body滚动穿透模态框（简单css）
         }
 
-        // 调用初始化
         init();
     })();
 </script>
